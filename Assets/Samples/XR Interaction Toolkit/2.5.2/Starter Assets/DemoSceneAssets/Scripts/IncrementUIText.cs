@@ -21,7 +21,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             set => m_Text = value;
         }
 
-        int m_Count;
+        public int m_Count;
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -38,6 +38,10 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         public void IncrementText()
         {
             m_Count += 1;
+            if (m_Count == 10)
+            {
+                m_Count = 0;
+            }
             if (m_Text != null)
                 m_Text.text = m_Count.ToString();
         }
