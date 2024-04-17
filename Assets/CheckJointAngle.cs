@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CheckJointAngle : MonoBehaviour
 {
-    private void Update()
+    [SerializeField] GameObject boat;
+    private void FixedUpdate()
     {
-        if(GetComponent<HingeJoint>().angle >= 120)
+        if(GetComponent<HingeJoint>().angle >= 90)
         {
-            Debug.Log("True");
+            boat.transform.position = new Vector3(boat.transform.position.x - .1f, boat.transform.position.y, boat.transform.position.z);
+            
         }
     }
 }
