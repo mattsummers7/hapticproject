@@ -15,7 +15,7 @@ public class CheckBulletCollide : MonoBehaviour
 
         if(other.gameObject.tag == "Bullet")
         {
-            Debug.Log("Hit");
+            CameraTracker.camerasDestroyed++;
             Destroy(gameObject);
         }
     }

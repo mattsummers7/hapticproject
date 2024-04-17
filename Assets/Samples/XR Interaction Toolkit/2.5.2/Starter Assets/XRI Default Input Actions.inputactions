@@ -781,6 +781,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "UI",
+                    "type": "Button",
+                    "id": "c4cf811f-5d6c-4b9b-bb3a-598d1bef4aba",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -946,6 +955,17 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Scale Delta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc37018c-651b-4c39-90ad-94a730faef4c",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxisClick}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "UI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1804,17 +1824,6 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "704525f1-96e2-4e22-bb40-6fdd120c5ecd",
-                    "path": "<XRController>{LeftHand}/{Primary2DAxisClick}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "UI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

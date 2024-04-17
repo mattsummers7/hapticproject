@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class CameraTracker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static int camerasDestroyed;
+
+    private void LateUpdate()
     {
-        
+        if (camerasDestroyed == 3)
+        {
+            StartCoroutine(switchOff());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator switchOff()
     {
-        
+        ChangeObjectiveText.shootCameras = false;
+        ChangeObjectiveText.findGold = true;
+        yield return new WaitForSeconds(1);
+        ChangeObjectiveText.findGold = false;
+        camerasDestroyed = 0;
     }
 }

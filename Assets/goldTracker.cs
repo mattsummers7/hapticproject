@@ -12,10 +12,20 @@ public class goldTracker : MonoBehaviour
     {
         if(goldCollected == 4)
         {
-            exitWall.SetActive(false);
+            StartCoroutine(switchOff());
         }
           
     }
 
-    
+    public IEnumerator switchOff()
+    {
+        exitWall.SetActive(false);
+        ChangeObjectiveText.findGold = false;
+        ChangeObjectiveText.escapeWallClimb = true;
+        yield return new WaitForSeconds(1);
+        ChangeObjectiveText.escapeWallClimb = false;
+        goldCollected = 0;
+    }
+
+
 }

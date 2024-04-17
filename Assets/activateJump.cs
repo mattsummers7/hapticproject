@@ -13,6 +13,8 @@ public class activateJump : MonoBehaviour
         {
             jump.enabled = true;
             respawnBox.SetActive(true);
+            ChangeObjectiveText.escapeWallClimb = false;
+            ChangeObjectiveText.escapeRoofJump = true;
         }
 
         
