@@ -11,7 +11,7 @@ public class DeactivateJump : MonoBehaviour
     {
         if (jump != null)
         {
-            jump.enabled = false;
+            jumpBehaviour.canJump = false;
             respawnBox.SetActive(false);
         }
 

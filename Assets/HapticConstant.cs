@@ -12,11 +12,14 @@ public class HapticConstant : MonoBehaviour
     public static bool isOn = false;
     private void Update()
     {
-        
-        if(isOn)
+        if(!EndGame.endFunction)
         {
-            ActivateHaptic();
+            if (isOn)
+            {
+                ActivateHaptic();
+            }
         }
+        
     }
 
     public void ActivateHaptic()

@@ -7,16 +7,29 @@ public class activateJump : MonoBehaviour
     [SerializeField] private jumpBehaviour jump;
     [SerializeField] private GameObject respawnBox;
 
+    public bool isTutorial;
+
     private void OnTriggerEnter(Collider other)
     {
         if (jump != null)
         {
-            jump.enabled = true;
+            jumpBehaviour.canJump = true;
             respawnBox.SetActive(true);
-            ChangeObjectiveText.escapeWallClimb = false;
-            ChangeObjectiveText.escapeRoofJump = true;
+            if(!isTutorial)
+            {
+                StartCoroutine(changeText());
+            }
+            
         }
 
         
+    }
+
+    public IEnumerator changeText()
+    {
+        ChangeObjectiveText.escapeWallClimb = false;
+        ChangeObjectiveText.escapeRoofJump = true;
+        yield return new WaitForSeconds(1f);
+        ChangeObjectiveText.escapeRoofJump = false;
     }
 }

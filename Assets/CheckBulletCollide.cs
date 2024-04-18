@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckBulletCollide : MonoBehaviour
 {
+    [SerializeField] private GameObject explosionPrefab;
     void FixedUpdate()
     {
         
@@ -17,6 +18,7 @@ public class CheckBulletCollide : MonoBehaviour
         {
             CameraTracker.camerasDestroyed++;
             Destroy(gameObject);
+            Instantiate(explosionPrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
         }
     }
 }

@@ -8,7 +8,7 @@ public class OpenTimer : MonoBehaviour
     [SerializeField] private InputActionProperty menuButton;
     [SerializeField] private GameObject timerUI;
 
-    private bool openTimer;
+    public static bool openTimer;
 
     private void Update()
     {

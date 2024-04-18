@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class EndGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public static bool endFunction;
+    private void OnTriggerEnter(Collider other)
     {
-        
+        Time.timeScale = 0;
+        TimerLogic.isPlaying = false;
+        OpenTimer.openTimer = true; ;
+        endFunction = true;
     }
 }

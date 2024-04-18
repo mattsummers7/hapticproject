@@ -17,9 +17,12 @@ public class jumpBehaviour : MonoBehaviour
     private float gravity = Physics.gravity.y;
     private Vector3 movement;
 
+    public static bool canJump;
+
     private void Update()
     {
-
+        if(canJump)
+        {
             bool isGrounded = IsGrounded();
 
 
@@ -33,6 +36,8 @@ public class jumpBehaviour : MonoBehaviour
             movement.y += gravity * Time.deltaTime;
 
             characterController.Move(movement * Time.deltaTime);
+        }
+            
         
         
     }

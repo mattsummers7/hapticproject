@@ -7,7 +7,7 @@ public class TimerLogic : MonoBehaviour
 {
     
     public static float timer;
-    public bool isPlaying;
+    public static bool isPlaying;
 
     private void Start()
     {

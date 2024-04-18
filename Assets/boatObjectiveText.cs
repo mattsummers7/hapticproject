@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class boatObjectiveText : MonoBehaviour
 {
+    public ChangeObjectiveText text;
     private void OnTriggerEnter(Collider other)
     {
             ChangeObjectiveText.escapeRoofJump = false;
