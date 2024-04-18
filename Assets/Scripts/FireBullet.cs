@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireBullet : MonoBehaviour
 {
+    [SerializeField] private AudioSource gunShot;
     public GameObject bullet;
     public Transform spawnPoint;
     public float FireSpeed = 20f;
@@ -28,6 +29,7 @@ public class FireBullet : MonoBehaviour
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * FireSpeed;
+        gunShot.Play();
         Debug.Log("PEWPEWPEW");
         Destroy(spawnedBullet, 5);
     }

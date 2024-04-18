@@ -10,6 +10,7 @@ public class jumpBehaviour : MonoBehaviour
     [SerializeField] private float jumpIntensity = 3f;
     [SerializeField] private CharacterController characterController;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioSource jumpSound;
 
     [SerializeField] private XRBaseController leftController;
     [SerializeField] private XRBaseController rightController;
@@ -29,6 +30,7 @@ public class jumpBehaviour : MonoBehaviour
             if (jumpButton.action.WasPressedThisFrame() && isGrounded)
             {
                 Jump();
+                jumpSound.Play();
                 leftController.SendHapticImpulse(1f, .2f);
                 rightController.SendHapticImpulse(1f, .2f);
             }

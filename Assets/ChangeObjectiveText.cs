@@ -42,7 +42,7 @@ public class ChangeObjectiveText : MonoBehaviour
 
         if(findGold)
         {
-            objectiveText.text = ("find all the gold in the bank and collect it");
+            objectiveText.text = ("find all 4 gold in the bank and collect it");
             StartCoroutine(ShowText(findGold));
             findGold = false;
         }
