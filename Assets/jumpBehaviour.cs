@@ -31,8 +31,8 @@ public class jumpBehaviour : MonoBehaviour
             {
                 Jump();
                 jumpSound.Play();
-                leftController.SendHapticImpulse(1f, .2f);
-                rightController.SendHapticImpulse(1f, .2f);
+                //leftController.SendHapticImpulse(1f, .2f);
+                //rightController.SendHapticImpulse(1f, .2f);
             }
 
             movement.y += gravity * Time.deltaTime;
