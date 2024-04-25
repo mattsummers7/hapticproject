@@ -5,6 +5,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class XrGrabInteractableTwoAttach : XRGrabInteractable
 {
+    //override script used on the gun to gain two transform points based on which hand is being used
+    //also contains holster for the positioning of the gun
+
     public Transform leftAttachTransform;
     public Transform rightAttachTransform;
     public Transform holster;

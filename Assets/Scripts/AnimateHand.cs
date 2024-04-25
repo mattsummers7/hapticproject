@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class AnimateHand : MonoBehaviour
 {
+    //hand grabbing and pinching animation using input system values
+
     public InputActionProperty pinchAnimationInput;
     public InputActionProperty gripAnimationInput;
 

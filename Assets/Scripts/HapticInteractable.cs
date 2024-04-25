@@ -6,6 +6,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HapticInteractable : MonoBehaviour
 {
+    //script for the haptic feedback in for gameobjects in the scene
+
+    //variables
     [Range(0f, 1f)]
     public float intensity;
     public float duration;
@@ -13,10 +16,11 @@ public class HapticInteractable : MonoBehaviour
     private void Start()
     {
         XRBaseInteractable interactable = GetComponent<XRBaseInteractable>();
-        interactable.selectEntered.AddListener(TriggerHaptic);
-        interactable.activated.AddListener(TriggerHaptic);
+        interactable.selectEntered.AddListener(TriggerHaptic); //trigger on select pressed
+        interactable.activated.AddListener(TriggerHaptic); //trigger on trigger press
     }
 
+    //finds out which controller is being used to send the haptic feedback to the right devcice on event start
     public void TriggerHaptic(BaseInteractionEventArgs eventArgs)
     {
 
@@ -26,6 +30,7 @@ public class HapticInteractable : MonoBehaviour
         }
     }
 
+    //applies haptic feedback to the correct device
     public void TriggerHaptic(XRBaseController controller)
     {
        if(intensity > 0)

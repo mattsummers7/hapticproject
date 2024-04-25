@@ -902,8 +902,6 @@ GameObject:
   - component: {fileID: 819812879004153630}
   - component: {fileID: 5491655399337674238}
   - component: {fileID: 6193745284501842658}
-  - component: {fileID: 5298501244184919349}
-  - component: {fileID: 7262878695944943472}
   - component: {fileID: 539145630997010711}
   - component: {fileID: 8814409767415799222}
   - component: {fileID: 5754169248069099004}
@@ -1163,60 +1161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_System: {fileID: 5551628799963886028}
   m_DelayTime: 0
---- !u!114 &5298501244184919349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645882263073370136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a1f2352e07dc145bc9f83efbbfa17e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftTeleportation: {fileID: 0}
-  rightTeleportation: {fileID: 165609984393522118}
-  leftActivate:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Left Activate
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: f2c87fae-6196-4f0d-9ec7-a107c7ffe0fb
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  rightActivate:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Activate
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 3edaf2a0-fcc0-477b-a25b-46d6b243f490
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &7262878695944943472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645882263073370136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eeb1844ec5df4949a56243a09603f62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftGrabRay: {fileID: 5945416062329073245}
-  rightGrabRay: {fileID: 7744711725905522590}
-  leftDirectGrab: {fileID: 5774749368440998175}
-  rightDirectGrab: {fileID: 5921390848221313579}
 --- !u!114 &539145630997010711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,7 +2483,7 @@ MonoBehaviour:
   m_PlayHapticsOnHoverCanceled: 0
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
-  m_AllowHoverHapticsWhileSelecting: 1
+  m_AllowHoverHapticsWhileSelecting: 0
   m_ImproveAccuracyWithSphereCollider: 0
   m_PhysicsLayerMask:
     serializedVersion: 2

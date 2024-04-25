@@ -5,6 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireBullet : MonoBehaviour
 {
+    //script to fire bullets from the gun game object
+
     [SerializeField] private AudioSource gunShot;
     public GameObject bullet;
     public Transform spawnPoint;
@@ -12,8 +14,10 @@ public class FireBullet : MonoBehaviour
     
     void Start()
     {
+        //finds the xr grab interactable script and adds an event when the trigger is pressed to fire a bullet
+
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
-        grabbable.activated.AddListener(FireBullett);
+        grabbable.activated.AddListener(ShootBullet);
 
    
     }
@@ -24,14 +28,15 @@ public class FireBullet : MonoBehaviour
         
     }
 
-    public void FireBullett(ActivateEventArgs arg)
+    public void ShootBullet(ActivateEventArgs arg)
     {
-        GameObject spawnedBullet = Instantiate(bullet);
+        GameObject spawnedBullet = Instantiate(bullet); 
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * FireSpeed;
         gunShot.Play();
-        Debug.Log("PEWPEWPEW");
         Destroy(spawnedBullet, 5);
+
+        //spawns bullet, sets position and velocity, plays sounds, deletes object after 5 seconds.
     }
 
 
